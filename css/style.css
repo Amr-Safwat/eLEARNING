@@ -195,5 +195,46 @@ header nav i {
   padding: 10px 15px;
   margin: 5px;
   border: 1px solid #ccc;
+  cursor: pointer;
+}
+.landing .icons i:hover {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
 }
 /* landing */
+/* Services */
+.services {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.services .service {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+  transition: .3s;
+}
+.services .service:hover {
+  background-color: var(--main-color);
+  transform: translateY(-10px);
+}
+.services .service:hover i {
+  color: white;
+}
+.services .service i {
+  font-size: 40px;
+  padding-top: 20px;
+  color: var(--main-color);
+}
+.services .service h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.services .service p {
+  margin: 0;
+}
+/* Services */

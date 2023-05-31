@@ -30,6 +30,15 @@ body {
       width: 1170px;
   }
 }
+.btn {
+  text-decoration: none;
+  color: black;
+  background-color: #eee;
+  padding: 15px 45px;
+  border: 1px solid var(--main-color);
+  display: inline-block;
+  background-color: var(--main-color);
+}
 /* commponants */
 header {
   display: flex;
@@ -38,6 +47,12 @@ header {
   box-shadow: 0 0px 20px rgb(0 0 0 / 50%);
   position: relative;
   z-index: 1;
+  transition: .3s;
+}
+.h-fixed {
+  position: fixed;
+  width: 100%;
+  background-color: white;
 }
 header .logo {
   text-decoration: none;
@@ -82,7 +97,6 @@ header nav .links {
   opacity: 0;
   transition: .3s;
 }
-
 header nav .links a {
   display: block;
   text-decoration: none;
@@ -179,17 +193,12 @@ header nav i {
   font-size: 22px;
   margin: 0 0 20px;
 }
-.landing .btn {
-  text-decoration: none;
-  color: black;
-  background-color: #eee;
-  padding: 15px 45px;
-  border: 1px solid #ccc;
-  display: inline-block;
-}
 .landing .btn:first-of-type {
-  background-color: var(--main-color);
   margin-right: 15px;
+}
+.landing .btn:last-of-type {
+  background-color: #eee;
+  border-color: #eee;
 }
 .landing .icons i {
   padding: 10px 15px;
@@ -238,3 +247,97 @@ header nav i {
   margin: 0;
 }
 /* Services */
+/* About Us */
+.about {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.about .container {
+  display: flex;
+  gap: 40px;
+}
+.about .image {
+  flex-basis: 50%;
+  width: 500px;
+  height: 450px;
+  overflow: hidden;
+  padding: 0 15px;
+}
+.about .image img {
+  max-width: 100%;
+}
+.about .content {
+  flex-basis: 50%;
+}
+.about .content h4 {
+  color: var(--main-color);
+  font-size: 18px;
+  margin: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 5px 10px 5px 0;
+  background-color: white;
+  position: relative;
+  display: inline-block;
+}
+.about .content h4::before,
+.about .content h4::after {
+  content: '';
+  background-color: var(--main-color);
+  height: 2px;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+.about .content h4::before {
+  width: calc(100% + 30px);
+  top: 11px;
+}
+.about .content h4::after {
+  width: calc(100% + 50px);
+  bottom: 13px;
+}
+.about .content h2 {
+  margin: 0;
+  font-size: 37px;
+}
+.about .content p {
+  color: #777;
+}
+.about .content .info {
+  color: #777;
+  display: flex;
+  margin: 20px 0;
+}
+.about .content .info .left,
+.about .content .info .right {
+flex: 1;
+}
+.about .content .info .left div,
+.about .content .info .right div {
+padding: 5px 20px;
+position: relative;
+}
+.about .content .info .left div::before,
+.about .content .info .right div::before {
+content: '\f061';
+font-family: 'font awesome 5 free';
+font-weight: 900;
+position: absolute;
+left: 0;
+color: var(--main-color);
+}
+.about .content button {
+  margin-top: 10px;
+}
+@media (max-width: 991px) {
+  .about .container {
+    flex-direction: column;
+  }
+  .about .image {
+    width: 100%;
+    height: 400px;
+    padding: 0;
+  }
+}
+/* About Us */
